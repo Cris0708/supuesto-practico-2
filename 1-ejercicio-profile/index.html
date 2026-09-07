@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .perfil {
+            background-color: white;
+            width: 320px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #cccccc;
+        }
+
+        .perfil img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        #boton-likes {
+            font-size: 30px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        #numero-likes {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="perfil">
+
+        <img id="foto" src="" alt="Foto de perfil">
+
+        <h1 id="nombre"></h1>
+
+        <p>
+            Edad: <span id="edad">--</span>
+        </p>
+
+        <p>
+            Lugar de nacimiento:
+            <span id="lugarNacimiento">--</span>
+        </p>
+
+        <div id="boton-likes">
+            <span>❤️</span>
+            <span id="numero-likes">--</span>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        const profile = {
+            nombre: "Carlos",
+            edad: 28,
+            lugarNacimiento: "Barcelona",
+            foto: "https://randomuser.me/api/portraits/men/32.jpg",
+            likes: 15 // puedes usar esta variable como variable de estado
+        };
+
+        // Obtenemos el nombre del objeto profile.
+        const nombre = document.querySelector("#nombre");
+        nombre.textContent = profile.nombre;
+
+    </script>
+
+</body>
+
+</html>
