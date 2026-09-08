@@ -83,6 +83,15 @@
         const precioEntrada = 25;
 
         // Tu código aquí
+        const inputEntradas = document.getElementById("numero-entradas");
+        const botonCalcular = document.getElementById("calcular");
+        const spanTotal = document.getElementById("precio-total");
+
+        botonCalcular.addEventListener("click", function(){
+         const cantidad = Number(inputEntradas.value);
+         const total = cantidad * precioEntrada;
+         spanTotal.textContent = total;
+        });
 
     </script>
 

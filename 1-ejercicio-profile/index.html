@@ -87,7 +87,19 @@
         // Obtenemos el nombre del objeto profile.
         const nombre = document.querySelector("#nombre");
         nombre.textContent = profile.nombre;
+     document.getElementById("nombre").textContent = profile.nombre;
+     document.getElementById("edad").textContent = profile.edad;
+     document.getElementById("lugar-nacimiento").textContent = profile.lugarNacimiento;
+     document.getElementById("foto").src = profile.foto;
 
+     let likes = profile.likes;
+     const botonLikes = document.getElementById("boton-likes");
+     const numeroLikes = document.getElementById("numero-likes");
+
+     botonLikes.addEventListener("click" , function() {
+        likes++;
+        numeroLikes.textContent = likes;
+     });
     </script>
 
 </body>
